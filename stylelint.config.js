@@ -1,6 +1,7 @@
 module.exports = {
     ignoreFiles: ['**/*.js', '**/*.md'],
     plugins: ['stylelint-order'],
+    extends: 'stylelint-config-standard-scss',
     overrides: [
         {
             files: ['**/*.(html|vue)'],

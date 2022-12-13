@@ -14,9 +14,11 @@ import LeftMenuVue from './components/LeftMenu.vue';
     display: grid;
     grid-template-areas: 'left-menu layouts';
     grid-template-columns: 110px 1fr;
+
     &:first-child {
         grid-area: left-menu;
     }
+
     &:last-child {
         grid-area: layouts;
     }

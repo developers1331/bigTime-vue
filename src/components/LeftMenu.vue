@@ -54,7 +54,6 @@ function toggleAuth(): void {
 }
 
 .menu {
-
     height: 100%;
 
     &__auth-btn {
@@ -95,10 +94,6 @@ function toggleAuth(): void {
             align-items: center;
             justify-content: flex-start;
             height: 100%;
-
-            .menu__nav-list-item {
-                margin-bottom: 50px;
-            }
         }
     }
 }
