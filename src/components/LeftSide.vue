@@ -1,24 +1,18 @@
 <template>
-    <section class="menu">
-        <div class="menu__top">
-            <div class="menu__logo">
-                <!-- <logo class="menu__log-picture" alt="logo"/> -->
+    <section class="left-side">
+        <div class="left-side__top">
+            <div class="left-side__logo">
+                <!-- <logo class="left-side__log-picture" alt="logo"/> -->
             </div>
-            <nav class="menu__nav">
-                <ul class="menu__nav-list">
-                    <li>PiZZZda</li>
-                    <li>PiZZZda</li>
-                    <li>PiZZZda</li>
-                </ul>
-            </nav>
+            <NavigationMenu />
         </div>
-        <div class="menu__bottom">
+        <div class="left-side__bottom">
             <transition
                 name="login-exit"
                 mode="out-in">
                 <component 
                     :is="isAuth ? iconExit : iconLogin"
-                    class="menu__auth-btn"   
+                    class="left-side__auth-btn"   
                     @click="toggleAuth()" />
             </transition>
         </div>
@@ -29,6 +23,7 @@
 import {Ref, ref} from 'vue';
 import iconLogin from '../assets/icons/icon-menu-login.svg?component';
 import iconExit from '../assets/icons/icon-menu-exit.svg?component';
+import NavigationMenu from './menu/NavigationMenu.vue';
 // import logo from '../assets/logo.svg?component';
 
 const isAuth: Ref<boolean> = ref(false);
@@ -53,8 +48,15 @@ function toggleAuth(): void {
     }
 }
 
-.menu {
+.left-side {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
     height: 100%;
+    padding: 80px 5px;
+    background: var(--mc-main);
+    border-right: 2px solid var(--mc-third);
 
     &__auth-btn {
         cursor: pointer;
@@ -83,18 +85,6 @@ function toggleAuth(): void {
         align-items: center;
         justify-content: center;
         margin-bottom: 40px;
-    }
-
-    &__nav {
-        height: 100%;
-
-        &-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100%;
-        }
     }
 }
 </style>

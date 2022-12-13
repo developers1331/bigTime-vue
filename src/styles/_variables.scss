@@ -1,0 +1,31 @@
+@use '_mixin.scss' as cssVars;
+
+$mainColors: (
+    'bg': #0b0d21,
+    'main': #161a42,
+    'secondary': #da22ff,
+    'third': #3461ff,
+    'achievementBg': #212760,
+    'linkColor': #5eead4,
+    'linkColorHover': #fafafb,
+    'textColor': #e2e4e9,
+    'iconColor': #02aab0,
+    'iconHoverColor': #02aab0
+);
+$buttonMap: (
+    'buttonBgColor': rgb(22 26 66 / 70%),
+    'buttonBgHoverColor': unset,
+    'buttonTextColor': #f9fafb,
+    'buttonTextHoverColor': #f9fafb,
+    'buttonBorder': unset,
+    'buttonHoverBorder': 1px solid #9994ba,
+);
+$borderRadius: (
+    'big': 28px,
+    'middle': 16px,
+    'small': 8px,
+);
+
+@include cssVars.makeCssColorVars($mainColors, 'mc');
+@include cssVars.makeCssColorVars($borderRadius, 'br');
+@include cssVars.makeCssColorVars($buttonMap, 'btn');

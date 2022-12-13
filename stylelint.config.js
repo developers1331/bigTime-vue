@@ -9,6 +9,8 @@ module.exports = {
         },
     ],
     rules: {
+        'scss/at-mixin-pattern': /.+/,
+        'scss/dollar-variable-pattern': /.+/,
         'max-nesting-depth': 4,
         'no-descending-specificity': null,
         'property-no-unknown': [

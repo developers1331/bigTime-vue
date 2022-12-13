@@ -1,12 +1,12 @@
 <template>
     <div class="container">
-        <LeftMenuVue />
+        <LeftSide />
         <div></div>
     </div>
 </template>
 
 <script setup lang="ts">
-import LeftMenuVue from './components/LeftMenu.vue';
+import LeftSide from './components/LeftSide.vue';
 </script>
 
 <style scoped lang="scss">

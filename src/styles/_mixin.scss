@@ -1,0 +1,13 @@
+@mixin makeCssColorVars($map, $prefix) {
+    $sel: ':root';
+
+    #{$sel} {
+
+        @each $name,
+            $val in $map {
+            $baseName: #{$prefix}-#{$name};
+
+            #{--}#{$baseName}: #{$val};
+        }
+    }
+}
