@@ -13,61 +13,93 @@
             </nav>
         </div>
         <div class="menu__bottom">
-            <iconLogin v-if="!isAuth" @click="toggleAuth()" alt="login"/>
-            <iconExit v-if="isAuth" @click="toggleAuth()" alt="exit"/>
+            <transition
+                name="login-exit"
+                mode="out-in">
+                <component 
+                    :is="isAuth ? iconExit : iconLogin"
+                    class="menu__auth-btn"   
+                    @click="toggleAuth()" />
+            </transition>
         </div>
     </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import {Ref, ref} from 'vue';
 import iconLogin from '../assets/icons/icon-menu-login.svg?component';
 import iconExit from '../assets/icons/icon-menu-exit.svg?component';
-import logo from '../assets/logo.svg?component';
+// import logo from '../assets/logo.svg?component';
 
-const isAuth = ref(false);
+const isAuth: Ref<boolean> = ref(false);
 
 function toggleAuth(): void {
     isAuth.value = !isAuth.value;
 }
+
 </script>
 
 <style lang="scss" scoped>
-    .menu {
+.login-exit {
+
+    &-enter-active,
+    &-leave-active {
+        transition: opacity 0.2s ease;
+    }
+
+    &-enter,
+    &-leave-to {
+        opacity: 0;
+    }
+}
+
+.menu {
+
+    height: 100%;
+
+    &__auth-btn {
+        cursor: pointer;
+    }
+
+    &__top {
         height: 100%;
-        &__top {
-            height: 100%;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-exit,
+        &-login {
+            display: block;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
         }
-        &__bottom {
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    &__nav {
+        height: 100%;
+
+        &-list {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            &-exit,
-            &-login {
-                display: block;
-                width: 24px;
-                height: 24px;
-                cursor: pointer;
+            justify-content: flex-start;
+            height: 100%;
+
+            .menu__nav-list-item {
+                margin-bottom: 50px;
             }
         }
-        &__logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        &__nav {
-            height: 100%;
-            &-list {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                height: 100%;
-                    .menu__nav-list-item {
-                        margin-bottom: 50px;
-                    }
-            }
-        }
+    }
 }
 </style>

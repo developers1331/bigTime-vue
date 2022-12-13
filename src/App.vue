@@ -1,8 +1,8 @@
 <template>
-<div class="container">
-    <LeftMenuVue/>
-    <div></div>
-</div>
+    <div class="container">
+        <LeftMenuVue />
+        <div></div>
+    </div>
 </template>
 
 <script setup lang="ts">

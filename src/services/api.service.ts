@@ -1,4 +1,4 @@
-import {injectable, singleton} from "tsyringe";
+import {injectable, singleton} from 'tsyringe';
 
 export interface IApiServiceRequest<D = unknown> {
     name: string;
@@ -10,7 +10,7 @@ export interface IApiServiceRequest<D = unknown> {
 @singleton()
 export default class ApiService {
 
-    constructor() {};
+    constructor() {}
 
     public static getApiDomain(): string {
         return import.meta.env.API_DOMAIN.replace(/\/$/g, '');
@@ -23,7 +23,7 @@ export default class ApiService {
         try {
             const response: Response = await fetch(apiDomain + '/api/' + apiPath, {
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
                 },
                 method: data.type,
                 body: JSON.stringify(data.data),
