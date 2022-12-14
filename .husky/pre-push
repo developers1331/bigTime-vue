@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx stylelint "src/**/*.{scss,vue}"
-npx eslint "src/**/*.{ts,vue}"
-# добавить запуск тестов
+# run unit test
+npx vitest run --environment happy-dom --coverage

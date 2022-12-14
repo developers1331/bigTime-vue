@@ -6,12 +6,16 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "vitest run --environment happy-dom",
+    "test coverage": "vitest run --coverage"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0",
     "reflect-metadata": "^0.1.13",
     "tsyringe": "^4.7.0",
+    "vite-tsconfig-paths": "^4.0.3",
+    "vitest": "^0.25.8",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
   },
@@ -20,9 +24,13 @@
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
     "@vitejs/plugin-vue": "^3.2.0",
+    "@vitest/coverage-c8": "^0.25.8",
+    "@vue/test-utils": "^2.2.6",
     "eslint": "^8.29.0",
     "eslint-plugin-vue": "^9.8.0",
+    "happy-dom": "^8.1.0",
     "husky": "^8.0.0",
+    "jsdom": "^20.0.3",
     "postcss-html": "^1.4.1",
     "postcss-scss": "^4.0.6",
     "sass": "^1.56.1",
