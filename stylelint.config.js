@@ -1,16 +1,11 @@
 module.exports = {
     ignoreFiles: ['**/*.js', '**/*.md'],
     plugins: ['stylelint-order'],
-    extends: 'stylelint-config-standard-scss',
-    overrides: [
-        {
-            files: ['**/*.(html|vue)'],
-            customSyntax: 'postcss-html',
-        },
-    ],
+    overrides: [{
+        files: ['**/*.(html|vue|scss)'],
+        customSyntax: 'postcss-html',
+    }],
     rules: {
-        'scss/at-mixin-pattern': /.+/,
-        'scss/dollar-variable-pattern': /.+/,
         'max-nesting-depth': 4,
         'no-descending-specificity': null,
         'property-no-unknown': [
@@ -77,8 +72,7 @@ module.exports = {
         'function-linear-gradient-no-nonstandard-direction': [
             true,
             {
-                message:
-                    'Синтаксис градиентов стандартен: https://clck.ru/F2NE9',
+                message: 'Синтаксис градиентов стандартен: https://clck.ru/F2NE9',
             },
         ],
         'function-max-empty-lines': [
@@ -205,8 +199,7 @@ module.exports = {
         'property-no-vendor-prefix': [
             true,
             {
-                message:
-                    'Вендорные префиксы тут лишние, используем Autoprefixer',
+                message: 'Вендорные префиксы тут лишние, используем Autoprefixer',
             },
         ],
         'declaration-bang-space-after': [
@@ -218,15 +211,13 @@ module.exports = {
         'declaration-bang-space-before': [
             'always',
             {
-                message:
-                    'Перед знаком восклицательным пробел оставить хочешь ты',
+                message: 'Перед знаком восклицательным пробел оставить хочешь ты',
             },
         ],
         'declaration-colon-newline-after': [
             'always-multi-line',
             {
-                message:
-                    'Для свойств множественных каждое — на строке своей быть должно',
+                message: 'Для свойств множественных каждое — на строке своей быть должно',
             },
         ],
         'declaration-colon-space-after': [
@@ -238,20 +229,17 @@ module.exports = {
         'declaration-colon-space-before': [
             'never',
             {
-                message:
-                    'Правило задавая, пробел перед двоеточием не используй',
+                message: 'Правило задавая, пробел перед двоеточием не используй',
             },
         ],
-        'declaration-property-unit-disallowed-list': [
-            {
-                'font-size': ['pt'],
-                'line-height': ['%'],
-                '/^animation/': ['ms'],
-            },
-            {
-                message:
-                    'Для этого свойства данные единицы измерения в чёрном списке',
-            },
+        'declaration-property-unit-disallowed-list': [{
+            'font-size': ['pt'],
+            'line-height': ['%'],
+            '/^animation/': ['ms'],
+        },
+        {
+            message: 'Для этого свойства данные единицы измерения в чёрном списке',
+        },
         ],
         'unit-disallowed-list': [
             ['pt'],
@@ -268,8 +256,7 @@ module.exports = {
         'declaration-block-no-shorthand-property-overrides': [
             true,
             {
-                message:
-                    'Свойство это неочевидно перебивает другое для селектора этого',
+                message: 'Свойство это неочевидно перебивает другое для селектора этого',
             },
         ],
         'declaration-block-semicolon-newline-after': [
@@ -287,8 +274,7 @@ module.exports = {
         'declaration-block-trailing-semicolon': [
             'always',
             {
-                message:
-                    'Свойство каждое точкой с запятой заканчивать хочешь ты',
+                message: 'Свойство каждое точкой с запятой заканчивать хочешь ты',
             },
         ],
         'block-closing-brace-empty-line-before': [
@@ -380,8 +366,7 @@ module.exports = {
         'selector-no-qualifying-type': [
             true,
             {
-                message:
-                    'Возможно, перенасыщенный селектор (использован селектор типа)',
+                message: 'Возможно, перенасыщенный селектор (использован селектор типа)',
                 ignore: ['attribute', 'class', 'id'],
                 severity: 'warning',
             },
@@ -401,8 +386,7 @@ module.exports = {
         'selector-pseudo-class-parentheses-space-inside': [
             'never',
             {
-                message:
-                    'Внутри скобок в псевдоселекторах пробелы ставить не следует',
+                message: 'Внутри скобок в псевдоселекторах пробелы ставить не следует',
             },
         ],
         'selector-pseudo-element-case': [
@@ -463,8 +447,7 @@ module.exports = {
         'selector-pseudo-element-colon-notation': [
             'single',
             {
-                message:
-                    'Двоеточие одинарное перед псевдоэлементом хочешь ты (кроме: placeholder, marker)',
+                message: 'Двоеточие одинарное перед псевдоэлементом хочешь ты (кроме: placeholder, marker)',
             },
         ],
         'rule-empty-line-before': [
@@ -513,8 +496,7 @@ module.exports = {
         'at-rule-empty-line-before': [
             'always',
             {
-                message:
-                    'Перед @-правилами строку пустую оставь (кроме @import и @include)',
+                message: 'Перед @-правилами строку пустую оставь (кроме @import и @include)',
                 ignoreAtRules: [
                     'forward',
                     'import',
@@ -571,8 +553,7 @@ module.exports = {
         'at-rule-no-vendor-prefix': [
             true,
             {
-                message:
-                    'Для @-правил вендорные префиксы использовать не следует',
+                message: 'Для @-правил вендорные префиксы использовать не следует',
             },
         ],
         'at-rule-semicolon-newline-after': [
@@ -632,8 +613,7 @@ module.exports = {
         'no-eol-whitespace': [
             true,
             {
-                message:
-                    'Пустые символы в конце строки. Используй https://clck.ru/F2Lqq',
+                message: 'Пустые символы в конце строки. Используй https://clck.ru/F2Lqq',
             },
         ],
         'no-extra-semicolons': [
@@ -645,8 +625,7 @@ module.exports = {
         'no-missing-end-of-source-newline': [
             true,
             {
-                message:
-                    'Файл пустой строкой кончаться должен: https://clck.ru/F2Lss',
+                message: 'Файл пустой строкой кончаться должен: https://clck.ru/F2Lss',
             },
         ],
         'order/order': [
@@ -897,4 +876,3 @@ module.exports = {
         ],
     },
 };
-

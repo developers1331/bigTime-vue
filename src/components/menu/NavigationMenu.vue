@@ -1,9 +1,8 @@
 <template>
     <nav class="navigation-menu">
         <ul class="navigation-menu__list">
-            <NavigationMenuItem :name="'V'" :link="'123.html'" />
-            <NavigationMenuItem :name="'D'" :link="'321.html'" />
-            <NavigationMenuItem :name="'V'" :link="'231.html'" />
+            <NavigationMenuItem :name="'/src/assets/icons/icon-menu-gear.svg'" :link="'123.html'" />
+            <NavigationMenuItem :name="'/src/assets/icons/icon-menu-statistics.svg'" :link="'321.html'" />
         </ul>
     </nav>
 </template>

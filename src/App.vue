@@ -1,11 +1,13 @@
 <template>
     <div class="container">
         <LeftSide />
-        <div></div>
+        <MainLayouts />
     </div>
 </template>
 
 <script setup lang="ts">
+
+import MainLayouts from './components/MainLayouts.vue';
 import LeftSide from './components/LeftSide.vue';
 </script>
 
