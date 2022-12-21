@@ -6,7 +6,10 @@
       ],
       "@assets/*": [
         "./src/assets/*"
-      ]
+      ],
+      "@SwiperBundleCss": [
+        "./node_modules/swiper/swiper-bundle.min.css"
+      ],
     },
     "experimentalDecorators": true,
     "target": "ESNext",

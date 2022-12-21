@@ -23,7 +23,7 @@
 import {Ref, ref} from 'vue';
 import iconLogin from '../assets/icons/icon-menu-login.svg?component';
 import iconExit from '../assets/icons/icon-menu-exit.svg?component';
-import NavigationMenu from './menu/NavigationMenu.vue';
+import NavigationMenu from '../components/left-side/NavigationMenu.vue';
 // import logo from '../assets/logo.svg?component';
 
 const isAuth: Ref<boolean> = ref(false);

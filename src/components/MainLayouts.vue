@@ -1,8 +1,5 @@
 <template>
     <router-view />
-    <div>
-        VDV
-    </div>
 </template>
 
 <script setup lang="ts">

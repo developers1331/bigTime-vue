@@ -1,7 +1,11 @@
 <template>
     <div class="container">
-        <LeftSide />
-        <MainLayouts />
+        <div class="container__left-side">
+            <LeftSide />
+        </div>
+        <div class="container__main-layouts">
+            <MainLayouts />
+        </div>
     </div>
 </template>
 
@@ -17,11 +21,11 @@ import LeftSide from './components/LeftSide.vue';
     grid-template-areas: 'left-menu layouts';
     grid-template-columns: 110px 1fr;
 
-    &:first-child {
+    &__left-side {
         grid-area: left-menu;
     }
 
-    &:last-child {
+    &__main-layouts {
         grid-area: layouts;
     }
 }
