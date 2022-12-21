@@ -1,7 +1,6 @@
 <template>
-    <router-view />
     <div>
-        VDV
+        profile page
     </div>
 </template>
 
