@@ -2,7 +2,9 @@
     <section class="left-side">
         <div class="left-side__top">
             <div class="left-side__logo">
-                <!-- <logo class="left-side__log-picture" alt="logo"/> -->
+                <router-link :to="'/'">
+                    <logo />
+                </router-link>
             </div>
             <NavigationMenu />
         </div>
@@ -21,9 +23,10 @@
 
 <script setup lang="ts">
 import {Ref, ref} from 'vue';
-import iconLogin from '../assets/icons/icon-menu-login.svg?component';
-import iconExit from '../assets/icons/icon-menu-exit.svg?component';
-import NavigationMenu from '../components/left-side/NavigationMenu.vue';
+import iconLogin from '@assets/icons/icon-menu-login.svg?component';
+import iconExit from '@assets/icons/icon-menu-exit.svg?component';
+import logo from '@assets/logo.svg?component';
+import NavigationMenu from 'components/left-side/NavigationMenu.vue';
 // import logo from '../assets/logo.svg?component';
 
 const isAuth: Ref<boolean> = ref(false);
@@ -60,6 +63,10 @@ function toggleAuth(): void {
 
     &__auth-btn {
         cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     &__top {
@@ -85,6 +92,17 @@ function toggleAuth(): void {
         align-items: center;
         justify-content: center;
         margin-bottom: 40px;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        svg {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+        }
     }
 }
 </style>

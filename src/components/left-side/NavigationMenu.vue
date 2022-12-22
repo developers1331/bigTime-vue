@@ -1,14 +1,16 @@
 <template>
     <nav class="navigation-menu">
-        <ul class="navigation-menu__list">
-            <NavigationMenuItem :name="'/src/assets/icons/icon-menu-gear.svg'" :link="'123.html'" />
-            <NavigationMenuItem :name="'/src/assets/icons/icon-menu-statistics.svg'" :link="'321.html'" />
-        </ul>
+        <div class="navigation-menu__list">
+            <NavigationMenuItem :component="gear" :link="'/profile'" />
+            <NavigationMenuItem :component="statistics" :link="'/statistics-users'" />
+        </div>
     </nav>
 </template>
 
 <script setup lang="ts">
-import NavigationMenuItem from './NavigationMenuItem.vue';
+import NavigationMenuItem from 'components/left-side/NavigationMenuItem.vue';
+import gear from '@assets/icons/icon-menu-gear.svg?component';
+import statistics from '@assets/icons/icon-menu-statistics.svg?component';
 </script>
 
 <style lang="scss" scoped>

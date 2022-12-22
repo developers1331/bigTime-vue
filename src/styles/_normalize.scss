@@ -43,7 +43,11 @@ $color: #000 !default;
     margin: 0;
     padding: 0;
 }
-
+.router-link-active,
+.router-link-exact-active {
+outline: unset;
+border: unset;
+}
 article,
 aside,
 details,
@@ -143,14 +147,14 @@ a {
     // 2
 
     &:focus {
-        outline: thin dotted;
+        outline: unset;
     }
 
     // 3
 
     &:hover,
     &:active {
-        outline: 0;
+        outline: unset;
     }
 }
 
