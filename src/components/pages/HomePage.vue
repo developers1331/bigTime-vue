@@ -11,13 +11,13 @@
                 🔥 Hot Bids
             </h2>
             <div>
-                slider
+                <TopAchievements />
             </div>
             <h2 class="title">
                 🔥 Hot Bids
             </h2>
             <div>
-                slider
+                <TopAchievements />
             </div>
         </div>
     </div>
@@ -25,6 +25,7 @@
 
 <script setup lang="ts">
 import TopUsersSlider from 'components/core/TopUsersSlider.vue';
+import TopAchievements from 'components/core/TopAchievements.vue';
 
 
 </script>

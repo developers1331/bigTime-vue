@@ -6,11 +6,141 @@
         }"
         :modules="[Scrollbar]"
         class="mySwiper">
-        <swiper-slide>Slide 1</swiper-slide><swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide><swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide><swiper-slide>Slide 6</swiper-slide>
-        <swiper-slide>Slide 7</swiper-slide><swiper-slide>Slide 8</swiper-slide>
-        <swiper-slide>Slide 9</swiper-slide>
+        <swiper-slide>
+            <div class="slider__slide-item">
+                <div class="slider__slide-item-img">
+                    <img src="../../assets/ava-user-1.jpg" alt="img-slide">
+                </div>
+                <div class="slider__slide-item-desc">
+                    <div class="slider__slide-item-desc-name">
+                        Crone
+                    </div>
+                    <div class="slider__slide-item-desc-value">
+                        1331
+                    </div>
+                </div>
+            </div>  
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slider__slide-item">
+                <div class="slider__slide-item-img">
+                    <img src="../../assets/ava-user-1.jpg" alt="img-slide">
+                </div>
+                <div class="slider__slide-item-desc">
+                    <div class="slider__slide-item-desc-name">
+                        Doken
+                    </div>
+                    <div class="slider__slide-item-desc-value">
+                        1331
+                    </div>
+                </div>
+            </div>  
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slider__slide-item">
+                <div class="slider__slide-item-img">
+                    <img src="../../assets/ava-user-1.jpg" alt="img-slide">
+                </div>
+                <div class="slider__slide-item-desc">
+                    <div class="slider__slide-item-desc-name">
+                        Wegana
+                    </div>
+                    <div class="slider__slide-item-desc-value">
+                        1331
+                    </div>
+                </div>
+            </div>  
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slider__slide-item">
+                <div class="slider__slide-item-img">
+                    <img src="../../assets/ava-user-1.jpg" alt="img-slide">
+                </div>
+                <div class="slider__slide-item-desc">
+                    <div class="slider__slide-item-desc-name">
+                        Firefly
+                    </div>
+                    <div class="slider__slide-item-desc-value">
+                        1331
+                    </div>
+                </div>
+            </div>  
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slider__slide-item">
+                <div class="slider__slide-item-img">
+                    <img src="../../assets/ava-user-1.jpg" alt="img-slide">
+                </div>
+                <div class="slider__slide-item-desc">
+                    <div class="slider__slide-item-desc-name">
+                        qWeepo
+                    </div>
+                    <div class="slider__slide-item-desc-value">
+                        1331
+                    </div>
+                </div>
+            </div>  
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slider__slide-item">
+                <div class="slider__slide-item-img">
+                    <img src="../../assets/ava-user-1.jpg" alt="img-slide">
+                </div>
+                <div class="slider__slide-item-desc">
+                    <div class="slider__slide-item-desc-name">
+                        Monzer
+                    </div>
+                    <div class="slider__slide-item-desc-value">
+                        1331
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slider__slide-item">
+                <div class="slider__slide-item-img">
+                    <img src="../../assets/ava-user-1.jpg" alt="img-slide">
+                </div>
+                <div class="slider__slide-item-desc">
+                    <div class="slider__slide-item-desc-name">
+                        Pashkayashka
+                    </div>
+                    <div class="slider__slide-item-desc-value">
+                        1331
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slider__slide-item">
+                <div class="slider__slide-item-img">
+                    <img src="../../assets/ava-user-1.jpg" alt="img-slide">
+                </div>
+                <div class="slider__slide-item-desc">
+                    <div class="slider__slide-item-desc-name">
+                        Pechenka
+                    </div>
+                    <div class="slider__slide-item-desc-value">
+                        1331
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="slider__slide-item">
+                <div class="slider__slide-item-img">
+                    <img src="../../assets/ava-user-1.jpg" alt="img-slide">
+                </div>
+                <div class="slider__slide-item-desc">
+                    <div class="slider__slide-item-desc-name">
+                        AbaldetSlayer
+                    </div>
+                    <div class="slider__slide-item-desc-value">
+                        1331
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
     </swiper>
 </template>
 
@@ -27,7 +157,8 @@ import {Scrollbar} from 'swiper';
 
 .swiper {
     width: 65vw;
-    height: 136px;
+    height: 120px;
+    background: transparent;
 }
 
 .swiper-slide {
@@ -35,9 +166,9 @@ import {Scrollbar} from 'swiper';
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
-    background: #fff;
+    background: transparent;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-box-align: center;
@@ -74,13 +205,20 @@ import {Scrollbar} from 'swiper';
         &-desc {
 
             &-name {
+                font-size: 18px;
                 font-weight: 700;
+                margin-bottom: 5px;
             }
 
             &-value {
                 color: var(--mc-linkColor);
+                font-size: 16px;
             }
         }
     }
 }
+
+:deep(.swiper-scrollbar-drag) {
+        background: var(--mc-linkColor);
+    }
 </style>
