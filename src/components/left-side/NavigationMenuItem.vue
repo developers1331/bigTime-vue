@@ -1,7 +1,7 @@
 <template>
     <div class="menu-item">
         <router-link :to="link">
-            <component :is="component" />
+            <component :is="props.component" />
         </router-link>
     </div>
 </template>

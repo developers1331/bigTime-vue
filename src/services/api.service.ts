@@ -1,4 +1,7 @@
-import {injectable, singleton} from 'tsyringe';
+import {
+    injectable,
+    singleton,
+} from 'tsyringe';
 
 export interface IApiServiceRequest<D = unknown> {
     name: string;
@@ -13,7 +16,9 @@ export default class ApiService {
     constructor() {}
 
     public static getApiDomain(): string {
-        return import.meta.env.API_DOMAIN.replace(/\/$/g, '');
+        // eslint-disable-next-line no-console
+        console.log(import.meta.env);
+        return import.meta.env.VITE_API_DOMAIN.replace(/\/$/g, '');
     }
 
     public async request<T, D>(data: IApiServiceRequest<D>): Promise<T | undefined> {
