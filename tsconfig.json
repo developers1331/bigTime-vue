@@ -10,6 +10,12 @@
       "@SwiperBundleCss": [
         "./node_modules/swiper/swiper-bundle.min.css"
       ],
+      "api/*": [
+        "./src/api/*"
+      ],
+      "services/*": [
+        "./src/services/*"
+      ],
     },
     "experimentalDecorators": true,
     "target": "ESNext",

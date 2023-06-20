@@ -7,7 +7,7 @@ import {
   Post,
   ValidationPipe,
 } from '@nestjs/common';
-import {AppService} from './app.service';
+import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
@@ -28,7 +28,7 @@ export class AppController {
     return this.appService.getUserById(id);
   }
 
-  @Get('/api/achiv/top/:amount')
+  @Post('/api/achiv/top/:amount')
   getTopAchivs(@Param('amount', ParseIntPipe) amount: number): any {
     return this.appService.getTopAchivs(amount);
   }

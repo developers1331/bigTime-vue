@@ -1,26 +1,36 @@
 /* eslint-disable prettier/prettier */
-
 export interface IAchiv {
-  id: string,
-  usersId: string[],
-  title: string,
-  description: string,
-  img?: string,
-  likes: number,
-}
-
-export interface IUser {
-  id: string,
-  nickName: string,
-  achivs: IAchiv[],
+  id: string;
+  usersId: string[];
+  title: string;
+  description: string;
+  img?: string;
+  likes: number;
 }
 
 export interface ITopAchiv {
-  id: string,
-  likes: number,
-  title: string,
-  img?: string,
+  id: string;
+  usersId: string[];
+  title: string;
+  description: string;
+  img?: string;
+  likes: number;
+  place: number;
 }
+
+export interface ITopAchivRequest {
+  numbers: number;
+}
+export interface ITopAchivResponse {
+  topAchiv: ITopAchiv[];
+}
+export interface IUser {
+  id: string;
+  nickName: string,
+  //TODO declarations
+  achivs: any,
+}
+
 
 import {Injectable} from '@nestjs/common';
 import _filter from 'lodash/filter.js';
@@ -71,8 +81,12 @@ export class AppService {
     return _filter(this.users, ['id', userId])[0];
   }
 
-  getTopAchivs(amount: number): IAchiv[] {
-    return _sortBy(this.achiv, [(achiv: IAchiv) => {achiv.likes}]).slice(0, amount);
+  getTopAchivs(amount: number): ITopAchiv[] {
+    // const sort = _sortBy(this.achiv, [(achiv: IAchiv) => {achiv.likes}]).slice(0, amount);
+    // sort.map((value, index) => {
+    //   value['place'] = index + 1;
+    // });
+    return [];
   }
 
   addNewAchiv(achiv: IAchiv): IAchiv {

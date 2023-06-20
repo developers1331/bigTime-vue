@@ -205,9 +205,9 @@ import {Scrollbar} from 'swiper';
         &-desc {
 
             &-name {
-                font-size: 18px;
-                font-weight: 700;
                 margin-bottom: 5px;
+                font-weight: 700;
+                font-size: 18px;
             }
 
             &-value {
@@ -218,7 +218,8 @@ import {Scrollbar} from 'swiper';
     }
 }
 
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 :deep(.swiper-scrollbar-drag) {
-        background: var(--mc-linkColor);
-    }
+    background: var(--mc-linkColor);
+}
 </style>

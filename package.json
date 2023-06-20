@@ -8,7 +8,8 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "test": "vitest run --environment happy-dom",
-    "test coverage": "vitest run --coverage"
+    "test coverage": "vitest run --coverage",
+    "update": "npm cache clean --force & npm i"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0",
